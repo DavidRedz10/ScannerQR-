@@ -1,0 +1,54 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-buttons [hidden]="scanActive" routerLink="/home">
+        <ion-icon slot="icon-only" name="backspace-outline"></ion-icon>
+      </ion-buttons> 
+    <ion-title> QR scanner </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content
+  [fullscreen]="true"
+  [style.--background]="scanActive?'#00000000':'#ffffff'"
+>
+ 
+  <ion-row class="scan-button" [hidden]="!scanActive">
+    <ion-col class="ion-no-padding">
+      <ion-button expand="full" (click)="stopScanner()">Stop</ion-button>
+    </ion-col>
+  </ion-row>
+  <div class="scan-box" [hidden]="!scanActive"></div>
+
+
+
+  <ion-card [hidden]="scanActive">
+    <ion-card-header>
+      <ion-card-title>Escanear codigo QR </ion-card-title>
+      <ion-card-subtitle>Sede ID:64574235</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <img src="https://static.wixstatic.com/media/110ec7_9212d3f164aa4e3e8470ff2a4307a6ea~mv2.png/v1/fill/w_1000,h_571,al_c,usm_0.66_1.00_0.01/110ec7_9212d3f164aa4e3e8470ff2a4307a6ea~mv2.png"/>
+      <ion-row class="ion-align-items-center ion-margin-top">
+        <ion-col >
+          <h2 class="price">Nombre empleado: XXXXXXXXX</h2>        
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-center ion-margin-top">
+        <ion-col >
+          <ion-button expand="full" shape="round"  color="success" (click)="startScanner()" [hidden]="scanActive">
+            Escanear
+          </ion-button>
+          <ion-row class="scan-button" [hidden]="!scanActive">
+            <ion-col class="ion-no-padding">
+              <ion-button expand="full" (click)="stopScanner()">Stop</ion-button>
+            </ion-col>
+          </ion-row>
+          <div class="scan-box" shape="round"[hidden]="!scanActive"></div>
+        </ion-col>
+      </ion-row>
+      
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

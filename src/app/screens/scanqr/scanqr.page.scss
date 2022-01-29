@@ -1,0 +1,44 @@
+
+.scan-box {   
+    border-radius: 12px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 100vmax rgb(0, 0, 0, 0.5);
+    content: "";
+    display: block;
+    left: 50%;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; 
+  }
+  .scan-button {
+    border-radius: 12px;
+    margin: 0px;
+    position: absolute;
+    bottom: 100px;
+    width: 100vw;
+    height: 50px;
+    z-index: 11;
+    
+  }
+
+  ion-content {
+
+    
+    ion-card {
+      --background: #fe6c02;
+      margin: 100px auto;
+      box-shadow: none;
+      border-radius: 12px;
+      width: 80%;
+      box-shadow: 0px 3px 45px 0px rgba(0, 0, 0, 0.10);
+      ion-card-title, .price {
+        font-weight: 700;
+        color: rgb(255, 255, 255);
+      }
+      ion-card-subtitle{
+        color: rgb(255, 255, 255);
+      }
+    }
+  }

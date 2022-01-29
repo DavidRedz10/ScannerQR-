@@ -1,0 +1,17 @@
+
+<ion-content class="ion-padding">
+  <h1>Bienvenido,</h1>
+  <h3>Ingresa tus datos</h3>
+  <h3>para continuar!</h3>
+
+
+<form>
+  <app-input label="Usuario" ></app-input>
+  <app-input label="Contraseña" type="password"></app-input>
+  <a routerLink="#" class="forgot-password-link">¿Olvidaste tu contraseña?</a>
+  
+  <app-button label='Ingresar como administrador' routerLink="/home"></app-button>
+  <app-icon-button icon='person' routerLink="/empleado" label='Ingresar como empleado'></app-icon-button>
+</form>
+
+</ion-content>
